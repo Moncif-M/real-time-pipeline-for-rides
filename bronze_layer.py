@@ -2,6 +2,17 @@ from pyspark.sql import SparkSession
 from delta import *
 from pyspark.sql.functions import from_json
 from pyspark.sql.types import *
+'''
+
+./spark-submit \
+--master local[4] \
+--packages io.delta:delta-spark_2.13:4.0.0,org.apache.spark:spark-sql-kafka-0-10_2.13:4.0.0 \
+/home/Viber/kafka_project/bronze_layer.py
+
+
+
+'''
+
 builder = SparkSession\
         .builder\
         .appName('BronzeIngest')\

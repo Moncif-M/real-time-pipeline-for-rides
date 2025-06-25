@@ -1,5 +1,16 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col
+'''
+
+
+./spark-submit /
+--master local[4] /
+--packages io.delta:delta-spark_2.13:4.0.0 /
+/home/Viber/kafka_project/silver_layer.py
+
+
+
+
+'''
 spark = SparkSession\
     .builder\
     .appName('SilverProcess')\

@@ -1,6 +1,13 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import avg, count, to_date, expr
 
+'''
+./spark-submit \
+--master local[4] \
+--packages io.delta:delta-spark_2.13:4.0.0 \
+/home/Viber/kafka_project/gold_layer.py
+'''
+
 spark = SparkSession\
     .builder\
     .appName('gold_aggregation')\
